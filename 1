@@ -1,0 +1,27 @@
+Ось текст із зображення:
+
+```
+UI menu.c32
+LABEL Debian Net Boot
+    MENU LABEL Debian netboot
+    kernel debian/install/amd/vmlinuz
+    append initrd=debian/install/amd/initrd.gz
+    TEXT HELP
+    Boot the Debian net booter
+    ENDTEXT
+
+LABEL debian netboot
+    MENU LABEL Debian netboot
+    kernel http://192.168.0.105/debian/install/amd/vmlinuz
+    append initrd=http://192.168.0.105/debian/install/amd/initrd.gz
+    TEXT HELP
+    Boot the Debian netboot
+    ENDTEXT
+
+LABEL partad live net
+    MENU LABEL partad live net
+    kernel http://192.168.0.105/partad/live/vmlinuz
+    append initrd=http://192.168.0.105/partad/live/initrd.img boot=live config components union=overlay username=user
+```
+
+Якщо вам потрібно більше інформації або пояснень, дайте знати!
